@@ -28,3 +28,4 @@ data_file.txt sends an email with the analysed files attached
 
 Known issues:
 -The "subject" field remains empty when the email with the analysed game is received
+-Folders analysed, attachments, tmp and sent must be created before launching the scripts
