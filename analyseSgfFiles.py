@@ -7,8 +7,9 @@ Created on Fri Sep  5 17:29:41 2014
 @author: emilio
 """
 
-# Goes to the folder and if it isn't empty and gnugno is not running
-# it'll take one sgf file, analyse it and sen it by email
+# Goes to the "attachments" folder and if it isn't empty and gnugo is not running
+# it'll take one sgf file, analyse it and place the result in the
+# "analysed" folder
 
 import os
 import shutil
@@ -48,7 +49,6 @@ else:
             subprocess.Popen(['gnugo', '-l', attFolder + sgfFile, '--output-flags', 'dv', '--level', level, '--replay', 'both', '--never-resign', '-o', tmpFolder + sgfAnnotatedFileName], stdout=subprocess.PIPE).communicate()[0]
             # Once the file is analysed we move the resulting file to the final folder
             shutil.move(tmpFolder + sgfAnnotatedFileName, analysedFolder + sgfAnnotatedFileName)
-#            os.rename(sys.path[0] +'/tmp/' + sgfAnnotatedFileName, sys.path[0] + '/analysed/' + sgfAnnotatedFileName)
             # And remove the original file in order to not to analyse it again
             os.remove(attFolder + sgfFile)
     else:
