@@ -25,3 +25,6 @@ time, no matter how many sgf files there are, in order to not to overload the cp
 leaves the result of the analysis in /analysed
 -sendGmailAttachment.py: it takes the files in /analysed and with the info stored in
 data_file.txt sends an email with the analysed files attached
+
+Known issues:
+-The "subject" field remains empty when the email with the analysed game is received
