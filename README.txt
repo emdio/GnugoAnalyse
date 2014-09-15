@@ -1,9 +1,9 @@
-This group of scripts read the sgf files sent to gnugnoanalyse@gmail.com, analyse them
+This group of scripts read the sgf files sent to myaccount@myaccount.com, analyse them
 wtih the help of gnugo and send the result of the analysis to the original email address
 
 A json file is needed with the info:
 {
-  "user": "myaccount@mayaccpount.com",
+  "user": "myaccount@myaccount.com",
   "pwd": "password"
 }
 
