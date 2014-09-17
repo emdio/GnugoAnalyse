@@ -1,5 +1,9 @@
 This group of scripts read the sgf files sent to myaccount@myaccount.com, analyse them
-wtih the help of gnugo and send the result of the analysis to the original email address
+wtih the help of gnugo and send the result of the analysis to the original email address.
+
+SGF are "smart game format", a file format to store Go records: http://senseis.xmp.net/?SmartGameFormat
+
+Gnugo is a free software Go engine: https://en.wikipedia.org/wiki/GNU_Go
 
 A json file is needed with the info:
 {
@@ -29,3 +33,4 @@ data_file.txt sends an email with the analysed files attached
 Known issues:
 -The "subject" field remains empty when the email with the analysed game is received
 -Folders analysed, attachments, tmp and sent must be created before launching the scripts
+-Only for linux based systems (makes use of linux commands like 'ps')
