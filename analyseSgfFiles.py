@@ -8,8 +8,7 @@ Created on Fri Sep  5 17:29:41 2014
 """
 
 # Goes to the "attachments" folder and if it isn't empty and gnugo is not running
-# it'll take one sgf file, analyse it and place the result in the
-# "analysed" folder
+# it'll take one sgf file, analyse it and place the result in the "analysed" folder
 
 import os
 import shutil
@@ -30,6 +29,10 @@ def isGnugoRunning():
         if 'gnugo' in proc:
             gnugoIsRunning = True
     return gnugoIsRunning
+    
+# Asuring attFolder exists
+if not os.path.isdir(attFolder):
+    os.makedirs(attFolder)
 
 if isGnugoRunning():
     print 'Gnugo is already running'
